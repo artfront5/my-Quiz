@@ -1,81 +1,30 @@
-body {
-  height: 100%;
-  background: linear-gradient(to right, #091d46, #3b3fff) no-repeat;
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
+const button = document.querySelector('.open');
+button.addEventListener('click', chekTest);
 
-.decoration {
-  margin-top: 200px;
-}
+function chekTest() {
+  let result = 0;
 
-input {
-  width: 500px;
-  height: 50px;
-}
+  let a1 = document.querySelector('.q1');
 
-p {
-  font-size: 30px;
-  color: white;
-}
-
-.q1 {
-  font-size: 30px;
-}
-
-.q2 {
-  font-size: 30px;
-}
-
-.q3 {
-  font-size: 30px;
-}
-
-.open {
-  background: #ffffff;
-  color: #000;
-  border-radius: 3px;
-  height: 50px;
-  width: 280px;
-
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 30px;
-}
-
-.open:hover {
-
-  box-shadow: 0 0 15px #424de6, 0 0 250px #1307b4;
-}
-
-@media (max-width: 767px) {
-  input {
-    width: 300px;
-    height: 40px;
+  if (a1.value === '4') {
+    result++
   }
 
-  p {
-    font-size: 20px;
+  let a2 = document.querySelector('.q2');
+  if (a2.value === '6') {
+    result++
   }
 
-  .open {
-    width: 200px;
+  let a3 = document.querySelector('.q3');
+  if (a3.value === '8') {
+    result++
   }
 
-  .q1 {
-    font-size: 20px;
-  }
+  a1.value = '';
+  a2.value = '';
+  a3.value = '';
 
-  .q2 {
-    font-size: 20px;
-  }
-
-  .q3 {
-    font-size: 20px;
-  }
-}
+  setTimeout(() => {
+    alert(`Количество правильных ответов: ${result}`)
+  }, 0);
+};
