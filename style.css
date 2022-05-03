@@ -1,5 +1,6 @@
 body {
   height: 100%;
+  width: 100%;
   background: linear-gradient(to right, #091d46, #3b3fff) no-repeat;
   margin: 0;
   padding: 0;
