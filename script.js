@@ -14,13 +14,9 @@ function chekTest() {
   if (a2.value === '6') {
     result++
   }
-  let a3 = document.querySelector('.q2') // вэлью, чтобы передать значение
+  let a3 = document.querySelector('.q3') // вэлью, чтобы передать значение
   if (a3.value === '8') {
     result++
-
-  if (a3.value.toUpperCase() === name.toUpperCase()) {
-    result++
-  }
 
   a1.value = '';
   a2.value = '';
